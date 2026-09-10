@@ -1,0 +1,882 @@
+/* ============================================
+   WEDDING INVITATION STYLES
+   ============================================ */
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+:root {
+  /* Colors */
+  --cream: #f5f1ed;
+  --ivory: #faf8f5;
+  --burgundy: #6b1f1f;
+  --deep-red: #8b2e2e;
+  --antique-gold: #c9a661;
+  --muted-green: #5a6b4a;
+  --vibrant-yellow: #f4d03f;
+  --light-yellow: #fef5d4;
+  
+  /* Typography */
+  --serif: 'Playfair Display', 'Garamond', serif;
+  --script: 'Great Vibes', 'Brush Script MT', cursive;
+  --sans: 'Lora', 'Georgia', serif;
+  
+  /* Spacing */
+  --spacing-xs: 0.5rem;
+  --spacing-sm: 1rem;
+  --spacing-md: 2rem;
+  --spacing-lg: 3rem;
+  --spacing-xl: 4rem;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: var(--sans);
+  background-color: var(--cream);
+  color: var(--burgundy);
+  line-height: 1.6;
+  overflow-x: hidden;
+}
+
+/* ============================================
+   NAVIGATION
+   ============================================ */
+
+nav {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 1000;
+  background: rgba(245, 241, 237, 0.95);
+  backdrop-filter: blur(10px);
+  border-bottom: 2px solid var(--antique-gold);
+  padding: 1rem 2rem;
+}
+
+.nav-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.nav-links {
+  display: flex;
+  gap: 3rem;
+  list-style: none;
+}
+
+.nav-links a {
+  text-decoration: none;
+  color: var(--burgundy);
+  font-size: 0.95rem;
+  font-weight: 500;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  transition: color 0.3s ease;
+  border-bottom: 2px solid transparent;
+  padding-bottom: 0.5rem;
+}
+
+.nav-links a:hover {
+  color: var(--antique-gold);
+  border-bottom-color: var(--antique-gold);
+}
+
+.nav-button {
+  background: var(--burgundy);
+  color: var(--cream);
+  border: none;
+  padding: 0.75rem 1.5rem;
+  border-radius: 2rem;
+  font-size: 0.85rem;
+  font-weight: 600;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  transition: background 0.3s ease;
+}
+
+.nav-button:hover {
+  background: var(--deep-red);
+}
+
+.hamburger {
+  display: none;
+  flex-direction: column;
+  cursor: pointer;
+}
+
+.hamburger span {
+  width: 25px;
+  height: 3px;
+  background: var(--burgundy);
+  margin: 5px 0;
+  transition: 0.3s;
+}
+
+/* ============================================
+   PAGE STRUCTURE
+   ============================================ */
+
+main {
+  padding-top: 80px;
+}
+
+.page {
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: url('data:image/svg+xml,<svg></svg>') center/cover;
+  position: relative;
+  padding: 3rem 2rem;
+}
+
+.page::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: url('assets/background.png') center/cover;
+  background-attachment: fixed;
+  z-index: -1;
+}
+
+.page-content {
+  max-width: 900px;
+  width: 100%;
+  z-index: 1;
+}
+
+/* ============================================
+   PAGE 1 — NIKAH INVITATION
+   ============================================ */
+
+#page-1 {
+  background-color: var(--cream);
+}
+
+.guest-greeting {
+  text-align: center;
+  margin-bottom: var(--spacing-lg);
+  font-family: var(--script);
+  font-size: 2rem;
+  color: var(--burgundy);
+}
+
+.logo-medallion {
+  text-align: center;
+  margin-bottom: var(--spacing-lg);
+}
+
+.circular-frame {
+  width: 180px;
+  height: 180px;
+  border-radius: 50%;
+  background: rgba(201, 166, 97, 0.15);
+  border: 3px solid var(--antique-gold);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0 auto;
+  box-shadow: inset 0 0 30px rgba(201, 166, 97, 0.2), 
+              0 0 30px rgba(201, 166, 97, 0.15);
+  position: relative;
+}
+
+.circular-frame img {
+  max-width: 90%;
+  max-height: 90%;
+  width: auto;
+  height: auto;
+  object-fit: contain;
+  display: block;
+  filter: drop-shadow(0 2px 4px rgba(0, 0, 0, 0.1));
+}
+
+.bismillah {
+  text-align: center;
+  margin: var(--spacing-lg) 0;
+}
+
+.bismillah img {
+  max-width: 300px;
+  width: 100%;
+  height: auto;
+  filter: drop-shadow(0 4px 8px rgba(0, 0, 0, 0.1));
+}
+
+.invitation-text {
+  text-align: center;
+  margin: var(--spacing-lg) 0;
+  line-height: 2;
+}
+
+.invitation-text .subtitle {
+  font-size: 0.95rem;
+  letter-spacing: 2px;
+  color: var(--burgundy);
+  margin-bottom: 1rem;
+}
+
+.invitation-text .family-name {
+  font-size: 1.1rem;
+  font-weight: 500;
+  margin: 1.5rem 0 0.5rem 0;
+}
+
+.invitation-text .occasion {
+  font-family: var(--serif);
+  font-size: 2rem;
+  color: var(--burgundy);
+  margin: 2rem 0;
+  font-weight: 700;
+}
+
+.invitation-text .couple-name {
+  font-family: var(--script);
+  font-size: 2.2rem;
+  color: var(--deep-red);
+  margin: 1.5rem 0;
+}
+
+.invitation-text .islamic-date {
+  font-family: 'Traditional Arabic';
+  font-size: 1.2rem;
+  margin: 2rem 0 1rem 0;
+}
+
+.date-display {
+  font-family: var(--serif);
+  font-size: 1.8rem;
+  letter-spacing: 4px;
+  color: var(--burgundy);
+  margin: 1.5rem 0 2rem 0;
+}
+
+/* Ornamental divider */
+.divider {
+  text-align: center;
+  color: var(--antique-gold);
+  font-size: 1.5rem;
+  margin: 1.5rem 0;
+}
+
+.divider::before,
+.divider::after {
+  content: '✦';
+  display: inline-block;
+  margin: 0 1rem;
+}
+
+/* ============================================
+   COUNTDOWN TIMER
+   ============================================ */
+
+.countdown-section {
+  margin-top: 3rem;
+  text-align: center;
+}
+
+.countdown-title {
+  font-family: var(--serif);
+  font-size: 1.1rem;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  color: var(--burgundy);
+  margin-bottom: 1.5rem;
+}
+
+.countdown-container {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 1.5rem;
+  background: rgba(245, 241, 237, 0.7);
+  border: 2px solid var(--antique-gold);
+  border-radius: 8px;
+  padding: 2rem;
+  backdrop-filter: blur(5px);
+  box-shadow: 0 4px 15px rgba(201, 166, 97, 0.2);
+}
+
+.countdown-item {
+  text-align: center;
+}
+
+.countdown-number {
+  font-family: var(--serif);
+  font-size: 2.5rem;
+  font-weight: bold;
+  color: var(--burgundy);
+  line-height: 1;
+  margin-bottom: 0.5rem;
+}
+
+.countdown-label {
+  font-size: 0.85rem;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  color: var(--antique-gold);
+  font-weight: 600;
+}
+
+/* ============================================
+   PAGE 2 — NIKAH VENUE
+   ============================================ */
+
+#page-2 {
+  background-color: var(--cream);
+}
+
+.arch-container {
+  position: relative;
+  padding: var(--spacing-lg);
+}
+
+.arch {
+  position: relative;
+  background: linear-gradient(180deg, rgba(250, 248, 245, 0.9) 0%, rgba(245, 241, 237, 0.95) 100%);
+  border: 2px solid var(--antique-gold);
+  border-bottom: 3px solid var(--antique-gold);
+  padding: 3rem 2rem;
+  text-align: center;
+  margin: 0 auto;
+  max-width: 600px;
+  position: relative;
+}
+
+/* Arch top curve */
+.arch::before {
+  content: '';
+  position: absolute;
+  top: -40px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 300px;
+  height: 80px;
+  border: 2px solid var(--antique-gold);
+  border-bottom: none;
+  border-radius: 150px 150px 0 0;
+}
+
+/* Hanging elements */
+.arch-hanging {
+  position: absolute;
+  top: -20px;
+  color: var(--antique-gold);
+  font-size: 2rem;
+  opacity: 0.6;
+}
+
+.arch-hanging:nth-child(1) { left: 15%; animation: sway 3s ease-in-out infinite; }
+.arch-hanging:nth-child(2) { right: 15%; animation: sway 3s ease-in-out infinite 0.5s; }
+
+@keyframes sway {
+  0%, 100% { transform: translateY(0px); }
+  50% { transform: translateY(10px); }
+}
+
+.arch-heading {
+  font-family: var(--script);
+  font-size: 3rem;
+  color: var(--deep-red);
+  margin-bottom: 0.5rem;
+}
+
+.arch-subheading {
+  font-family: var(--serif);
+  font-size: 1.8rem;
+  color: var(--burgundy);
+  margin-bottom: 2rem;
+  font-weight: 600;
+}
+
+.venue-info {
+  margin: 2rem 0;
+}
+
+.venue-name {
+  font-family: var(--serif);
+  font-size: 1.5rem;
+  color: var(--burgundy);
+  margin-bottom: 1rem;
+  font-weight: 600;
+}
+
+.venue-address {
+  font-size: 0.95rem;
+  line-height: 1.8;
+  color: var(--burgundy);
+  margin-bottom: 2rem;
+}
+
+.location-button {
+  background: var(--burgundy);
+  color: var(--cream);
+  border: none;
+  padding: 1rem 2.5rem;
+  border-radius: 2rem;
+  font-size: 0.9rem;
+  font-weight: 600;
+  cursor: pointer;
+  display: inline-flex;
+  align-items: center;
+  gap: 0.75rem;
+  transition: all 0.3s ease;
+  text-decoration: none;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+}
+
+.location-button:hover {
+  background: var(--deep-red);
+  transform: translateY(-2px);
+  box-shadow: 0 4px 15px rgba(107, 31, 31, 0.3);
+}
+
+/* ============================================
+   PAGE 3 — HALDI
+   ============================================ */
+
+#page-3 {
+  background-color: var(--cream);
+}
+
+.haldi-arch {
+  background: linear-gradient(180deg, var(--light-yellow) 0%, rgba(254, 245, 212, 0.9) 100%);
+  border: 2px solid var(--antique-gold);
+  border-bottom: 3px solid var(--antique-gold);
+  padding: 3rem 2rem;
+  text-align: center;
+  margin: 0 auto;
+  max-width: 600px;
+  position: relative;
+}
+
+.haldi-arch::before {
+  content: '';
+  position: absolute;
+  top: -40px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 300px;
+  height: 80px;
+  border: 2px solid var(--antique-gold);
+  border-bottom: none;
+  border-radius: 150px 150px 0 0;
+}
+
+.haldi-heading {
+  font-family: var(--script);
+  font-size: 3rem;
+  color: var(--antique-gold);
+  margin-bottom: 1rem;
+}
+
+.haldi-subtitle {
+  font-size: 1rem;
+  line-height: 1.8;
+  color: var(--burgundy);
+  margin-bottom: 2.5rem;
+  font-style: italic;
+}
+
+/* ============================================
+   SCRATCH CARD
+   ============================================ */
+
+.scratch-card-section {
+  margin: 2.5rem 0;
+}
+
+.scratch-card {
+  position: relative;
+  width: 280px;
+  height: 160px;
+  margin: 0 auto;
+  background: linear-gradient(135deg, #d4af37 0%, #f0e68c 50%, #daa520 100%);
+  border-radius: 8px;
+  cursor: pointer;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+  touch-action: none;
+}
+
+.scratch-card canvas {
+  display: block;
+  width: 100%;
+  height: 100%;
+  border-radius: 8px;
+}
+
+.scratch-card-content {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  background: linear-gradient(135deg, #d4af37 0%, #f0e68c 50%, #daa520 100%);
+  border-radius: 8px;
+  pointer-events: none;
+}
+
+.scratch-hint {
+  font-family: var(--serif);
+  font-size: 0.95rem;
+  color: rgba(107, 31, 31, 0.6);
+  margin-bottom: 0.5rem;
+}
+
+.scratch-heart {
+  font-size: 1.5rem;
+  color: var(--burgundy);
+}
+
+.revealed-date {
+  font-family: var(--serif);
+  font-size: 1.8rem;
+  letter-spacing: 3px;
+  color: var(--burgundy);
+  font-weight: bold;
+  text-align: center;
+  opacity: 0;
+  transition: opacity 0.3s ease;
+}
+
+.revealed-date.show {
+  opacity: 1;
+}
+
+/* ============================================
+   PAGE 4 — DUA, MEMORY & CLOSING
+   ============================================ */
+
+#page-4 {
+  background-color: var(--cream);
+  padding-top: 80px;
+}
+
+.page-4-content {
+  max-width: 700px;
+  margin: 0 auto;
+}
+
+/* Dua Section */
+.dua-section {
+  background: rgba(245, 241, 237, 0.7);
+  border: 2px solid var(--antique-gold);
+  border-radius: 8px;
+  padding: 3rem 2rem;
+  margin-bottom: 3rem;
+  backdrop-filter: blur(5px);
+}
+
+.section-heading {
+  font-family: var(--script);
+  font-size: 2.5rem;
+  color: var(--deep-red);
+  margin-bottom: 0.5rem;
+  text-align: center;
+}
+
+.section-subtitle {
+  text-align: center;
+  color: var(--burgundy);
+  margin-bottom: 2rem;
+  font-size: 0.95rem;
+}
+
+.form-group {
+  margin-bottom: 1.5rem;
+}
+
+.form-group label {
+  display: block;
+  font-weight: 600;
+  color: var(--burgundy);
+  margin-bottom: 0.5rem;
+  font-size: 0.95rem;
+}
+
+.form-group input[type="text"],
+.form-group textarea {
+  width: 100%;
+  padding: 0.75rem 1rem;
+  border: 1px solid var(--antique-gold);
+  border-radius: 4px;
+  font-family: var(--sans);
+  font-size: 0.95rem;
+  color: var(--burgundy);
+  background: rgba(250, 248, 245, 0.8);
+}
+
+.form-group textarea {
+  resize: vertical;
+  min-height: 120px;
+}
+
+.form-group input[type="text"]::placeholder,
+.form-group textarea::placeholder {
+  color: rgba(107, 31, 31, 0.5);
+}
+
+.rsvp-options {
+  display: flex;
+  gap: 1rem;
+  margin: 1.5rem 0;
+}
+
+.rsvp-btn {
+  flex: 1;
+  padding: 0.75rem 1rem;
+  border: 2px solid var(--antique-gold);
+  background: transparent;
+  color: var(--burgundy);
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 0.9rem;
+  font-weight: 600;
+  transition: all 0.3s ease;
+}
+
+.rsvp-btn:hover,
+.rsvp-btn.active {
+  background: var(--burgundy);
+  color: var(--cream);
+  border-color: var(--burgundy);
+}
+
+.submit-btn {
+  width: 100%;
+  padding: 1rem;
+  background: var(--burgundy);
+  color: var(--cream);
+  border: none;
+  border-radius: 2rem;
+  font-size: 0.9rem;
+  font-weight: 600;
+  cursor: pointer;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  transition: all 0.3s ease;
+  margin-top: 1rem;
+}
+
+.submit-btn:hover {
+  background: var(--deep-red);
+  transform: translateY(-2px);
+  box-shadow: 0 4px 15px rgba(107, 31, 31, 0.3);
+}
+
+/* Memory Section */
+.memory-section {
+  background: rgba(245, 241, 237, 0.5);
+  border-left: 3px solid var(--antique-gold);
+  border-right: 3px solid var(--antique-gold);
+  padding: 3rem 2rem;
+  margin: 3rem 0;
+  text-align: center;
+}
+
+.memory-section .section-heading {
+  margin-bottom: 2rem;
+}
+
+.memory-text {
+  font-size: 0.95rem;
+  line-height: 2;
+  color: var(--burgundy);
+  font-style: italic;
+  margin-bottom: 1.5rem;
+}
+
+.memory-text strong {
+  font-style: normal;
+  color: var(--deep-red);
+  display: block;
+  margin-top: 1.5rem;
+  font-size: 1rem;
+}
+
+/* Closing Section */
+.closing-section {
+  text-align: center;
+  padding: 3rem 2rem;
+  border-top: 2px solid var(--antique-gold);
+  border-bottom: 2px solid var(--antique-gold);
+  margin: 3rem 0;
+}
+
+.closing-dua {
+  font-size: 0.95rem;
+  line-height: 2;
+  color: var(--burgundy);
+  font-style: italic;
+  margin-bottom: 1.5rem;
+}
+
+.closing-dua .ameen {
+  font-size: 1.1rem;
+  color: var(--deep-red);
+  font-weight: 600;
+  font-style: normal;
+  margin-top: 1rem;
+}
+
+/* ============================================
+   RESPONSIVE DESIGN
+   ============================================ */
+
+@media (max-width: 768px) {
+  nav {
+    padding: 1rem;
+  }
+  
+  .nav-links {
+    gap: 1.5rem;
+  }
+  
+  .nav-links a {
+    font-size: 0.8rem;
+  }
+  
+  .nav-button {
+    padding: 0.6rem 1rem;
+    font-size: 0.75rem;
+  }
+  
+  .page {
+    padding: 2rem 1rem;
+    min-height: auto;
+  }
+  
+  .circular-frame {
+    width: 140px;
+    height: 140px;
+  }
+  
+  .guest-greeting {
+    font-size: 1.5rem;
+  }
+  
+  .arch-heading {
+    font-size: 2.2rem;
+  }
+  
+  .arch-subheading {
+    font-size: 1.4rem;
+  }
+  
+  .countdown-container {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1rem;
+    padding: 1.5rem;
+  }
+  
+  .countdown-number {
+    font-size: 2rem;
+  }
+  
+  .invitation-text .couple-name {
+    font-size: 1.8rem;
+  }
+  
+  .invitation-text .occasion {
+    font-size: 1.6rem;
+  }
+  
+  .date-display {
+    font-size: 1.4rem;
+  }
+  
+  .haldi-heading {
+    font-size: 2.5rem;
+  }
+  
+  .section-heading {
+    font-size: 2rem;
+  }
+  
+  .rsvp-options {
+    flex-direction: column;
+  }
+  
+  .arch::before,
+  .haldi-arch::before {
+    width: 220px;
+  }
+}
+
+@media (max-width: 480px) {
+  .nav-links {
+    display: none;
+  }
+  
+  .hamburger {
+    display: flex;
+  }
+  
+  .countdown-container {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 0.75rem;
+    padding: 1rem;
+  }
+  
+  .countdown-number {
+    font-size: 1.5rem;
+  }
+  
+  .countdown-label {
+    font-size: 0.7rem;
+  }
+  
+  .arch,
+  .haldi-arch {
+    padding: 2rem 1.5rem;
+  }
+  
+  .dua-section,
+  .memory-section,
+  .closing-section {
+    padding: 1.5rem 1rem;
+  }
+  
+  .invitation-text .family-name {
+    font-size: 0.9rem;
+  }
+  
+  .invitation-text .occasion {
+    font-size: 1.3rem;
+    margin: 1.5rem 0;
+  }
+  
+  .invitation-text .couple-name {
+    font-size: 1.4rem;
+  }
+}
+
+/* Print Styles */
+@media print {
+  nav {
+    display: none;
+  }
+  
+  .page {
+    page-break-after: always;
+  }
+}
